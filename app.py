@@ -10,8 +10,7 @@ while True:
     f = filehandling.FileHandling(filename)
     if f.file_ok:
         break
-    else:
-        print(f'"{filename}" could not be opened. Check file path and filename and try again.')
+    print(f'"{filename}" could not be opened. Check file path and filename and try again.')
 print(f"Reading input from {filename} in chunks of no more than {cfg.BUFFERSIZE} bytes")
 while f.file_ok and not f.eof:
     b = f.readfromfile(cfg.BUFFERSIZE)
